@@ -1,4 +1,6 @@
-package jmp.training.three.figure;
+package jmp.training.three.model;
+
+import jmp.training.three.figure.AbstractFigure;
 
 import java.awt.*;
 
@@ -7,6 +9,8 @@ public class Ball extends AbstractFigure {
 
     public Ball(int radius) {
         this.radius = radius;
+        this.setWidth(radius);
+        this.setHeight(radius);
     }
 
     public int getRadius() {

@@ -1,18 +1,21 @@
 package jmp.training.three.figure;
 
+import jmp.training.three.model.Figure;
+
 import java.awt.*;
 
 public abstract class AbstractFigure implements Figure {
-    protected final Color color = Color.BLUE;
-    protected final int width = 15;
-    protected final int height = 15;
-
-    public AbstractFigure() {
-    }
+    private Color color;
+    private int width;
+    private int height;
 
     @Override
     public Color getColor() {
         return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     @Override
@@ -20,10 +23,16 @@ public abstract class AbstractFigure implements Figure {
         return width;
     }
 
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
     @Override
     public int getHeight() {
         return height;
     }
 
-
+    public void setHeight(int height) {
+        this.height = height;
+    }
 }

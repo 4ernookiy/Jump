@@ -1,6 +1,6 @@
-package jmp.training.three.was;
+package jmp.training.three.move;
 
-import jmp.training.three.figure.Figure;
+import jmp.training.three.model.Figure;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,7 +35,7 @@ public class MoveImpl implements Move {
 
     @Override
     public void move() {
-        new Timer(delay, new MoveAction(frame, figure, 200, 50, 2)).start();
+        new Timer(delay, new MoveAction(frame, figure, x, y, step)).start();
     }
 
 

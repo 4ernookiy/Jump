@@ -8,7 +8,7 @@ public class ColorGenerator implements IColorGenerator{
     private ColorGenerator() {
     }
 
-    private static class  GeneratorHolder{
+    private static class GeneratorHolder{
         private final static IColorGenerator instance = new ColorGenerator();
     }
     public static IColorGenerator getInstance() {

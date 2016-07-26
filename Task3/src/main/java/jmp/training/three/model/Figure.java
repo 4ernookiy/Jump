@@ -1,4 +1,4 @@
-package jmp.training.three.figure;
+package jmp.training.three.model;
 
 import java.awt.*;
 

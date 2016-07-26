@@ -1,4 +1,4 @@
-package jmp.training.three.was;
+package jmp.training.three.move;
 
 /**
  * Created by D on 24.07.2016.
