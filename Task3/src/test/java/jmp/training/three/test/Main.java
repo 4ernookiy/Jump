@@ -2,8 +2,7 @@ package jmp.training.three.test;
 
 import jmp.training.three.color.ColorGenerator;
 import jmp.training.three.figure.AbstractFigureFactory;
-import jmp.training.three.model.DecoratorJson;
-import jmp.training.three.model.Figure;
+import jmp.training.three.model.*;
 import jmp.training.three.frame.AwtFrame;
 import jmp.training.three.move.Move;
 import jmp.training.three.move.MoveImpl;
@@ -12,11 +11,15 @@ import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.*;
 
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
+
+//        java.util.List<Ball> ballList = AbstractFigureFactory.<jmp.training.three.model.Ball>newList("r");
+
 //        Figure figure= AbstractFigureFactory.getInstance().getRectangle(70,20);;
         Figure figure = AbstractFigureFactory.getInstance().getBall(50);
 

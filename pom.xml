@@ -4,7 +4,7 @@
 
     <groupId>jmp.training</groupId>
     <artifactId>main</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
 
     <packaging>pom</packaging>
     <developers>
@@ -17,6 +17,7 @@
     <modules>
         <module>task1</module>
         <module>task3</module>
+        <module>task4</module>
     </modules>
  
 	<properties>

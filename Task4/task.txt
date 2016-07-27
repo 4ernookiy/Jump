@@ -1,0 +1,9 @@
+Implement code that will introduce:
+
+
+1) java.lang.OutOfMemoryError: Java heap space. Do not use arrays or collections.
+2) java.lang.OutOfMemoryError: PermGen space. Load classes continuously and make them stay in memory
+3) java.lang.StackOverflowError. Do not use recursive methods.
+
+
+Install Memory Analyzer Tool(MAT), investigate leak suspects.
