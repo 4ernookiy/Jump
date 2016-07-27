@@ -28,7 +28,7 @@
         <logger.slf4j.api>1.7.21</logger.slf4j.api>
 
         <maven.compiler.plugin>3.3</maven.compiler.plugin>
-        <maven.jar.plugin>2.6</maven.jar.plugin>
+        <maven.jar.plugin>3.0.2</maven.jar.plugin>
         <maven.war.plugin>2.6</maven.war.plugin>
         <maven.dependency.plugin>2.10</maven.dependency.plugin>
 	</properties>

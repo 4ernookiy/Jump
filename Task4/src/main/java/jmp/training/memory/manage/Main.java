@@ -4,6 +4,8 @@ package jmp.training.memory.manage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Random;
+
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
@@ -37,13 +39,23 @@ public class Main {
         }
     }
 
+
     public void generateOOM2() throws Exception {
-        int iteratorValue = 20;
-//        System.out.println("\n=================> OOM test started..\n");
+        System.out.println("\n=================> OOM test started..\n");
+        LinkTest root = new LinkTest();
+        LinkTest previus = new LinkTest();
+        root.setLink(previus);// this is next
+        Random r = new Random(Integer.MAX_VALUE);
         for (int i = 0; i < Integer.MAX_VALUE; i++) {
-            String S = new String("test string");
-            generateOOM2();
-            //System.out.println("\nRequired Memory for next loop: " + iteratorValue);
+            Integer p = new Integer(r.nextInt());
+            Integer n = new Integer(r.nextInt());
+            LinkTest next = new LinkTest(p,n);
+            previus.setLink(next);
+            previus = next;
+            if(i % 1000000 == 0) {
+                String s= "Iteration " + i + " Free Mem: " + Runtime.getRuntime().freeMemory();
+                System.out.println(s);
+            }
         }
     }
 }
