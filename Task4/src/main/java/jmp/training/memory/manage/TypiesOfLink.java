@@ -6,7 +6,7 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
-public class Main2
+public class TypiesOfLink
 {
 
     public static void main(String[] args) {

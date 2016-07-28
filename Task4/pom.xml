@@ -30,7 +30,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>jmp.training.memory.manage.Main</mainClass>
+                            <mainClass>jmp.training.memory.manage.OOMHeapTest</mainClass>
                             <addClasspath>true</addClasspath>
                         </manifest>
                     </archive>

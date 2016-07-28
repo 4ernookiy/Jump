@@ -1,49 +1,42 @@
 package jmp.training.memory.manage;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Random;
 
-public class Main {
-    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+public class OOMHeapTest {
+    private static final Logger logger = LoggerFactory.getLogger(OOMHeapTest.class);
     private static LinkTest root = new LinkTest();;
 
     public static void main(String[] args) {
 
-        Main memoryTest = new Main();
+        OOMHeapTest memoryTest = new OOMHeapTest();
         try
         {
             memoryTest.generateOOM2();
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+            logger.error(e.getLocalizedMessage());
         }
     }
 
     public void generateOOM2() throws Exception {
-        System.out.println("\n=================> OOM test started..\n");
-//        LinkTest root = new LinkTest();
         LinkTest previus = new LinkTest();
         root.setLink(previus);// this is next
         Random r = new Random(Integer.MAX_VALUE);
 
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("belavia_ground.jpg").getFile());
+        InputStream input = getClass().getResourceAsStream("/belavia_ground.jpg");
 
         for (int i = 0; i < Integer.MAX_VALUE; i++) {
             Integer p = r.nextInt();
             Integer n = r.nextInt();
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+            int a = reader.read();
 
-            int a = bufferedReader.read();
-
-            LinkTest next = new LinkTest(p,n, bufferedReader);
+            LinkTest next = new LinkTest(p,n, reader);
             previus.setLink(next);
             previus = next;
             if(i % 1500 == 0) {
