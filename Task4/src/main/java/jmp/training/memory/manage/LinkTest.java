@@ -1,8 +1,9 @@
 package jmp.training.memory.manage;
 
 public class LinkTest {
-    private Integer previus=new Integer(100000);
-    private Integer next=new Integer(100000);
+    private Integer previus;
+    private Integer next;
+    private Readable buffer;
     private LinkTest link;
 
 
@@ -12,6 +13,13 @@ public class LinkTest {
     public LinkTest(Integer previus, Integer next) {
         this.previus = previus;
         this.next = next;
+    }
+
+    public LinkTest(Integer previus, Integer next, Readable buffer)
+    {
+        this.previus = previus;
+        this.next = next;
+        this.buffer = buffer;
     }
 
     public Integer getPrevius() {
@@ -36,6 +44,16 @@ public class LinkTest {
 
     public void setLink(LinkTest link) {
         this.link = link;
+    }
+
+    public Readable getBuffer()
+    {
+        return buffer;
+    }
+
+    public void setBuffer(Readable buffer)
+    {
+        this.buffer = buffer;
     }
 
     @Override
