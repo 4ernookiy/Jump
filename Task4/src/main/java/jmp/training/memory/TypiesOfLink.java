@@ -1,4 +1,4 @@
-package jmp.training.memory.manage;
+package jmp.training.memory;
 
 
 import java.lang.ref.PhantomReference;
