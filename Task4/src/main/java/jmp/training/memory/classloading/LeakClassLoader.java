@@ -3,6 +3,8 @@ package jmp.training.memory.classloading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
@@ -12,9 +14,11 @@ public class LeakClassLoader extends URLClassLoader {
     private static int i = 0;
 
     public LeakClassLoader() {
-        super(new URL[]{
-                getContextClassLoaderClassPath()
-        });
+        this(getContextClassLoaderClassPath());
+    }
+
+    public LeakClassLoader(URL url) {
+        super(new URL[]{url});
     }
 
     @Override
