@@ -23,7 +23,7 @@
  
 	<properties>
         <target.directory>${basedir}/target</target.directory>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF8</project.build.sourceEncoding>
 		
         <logger.slf4j.api>1.7.21</logger.slf4j.api>
