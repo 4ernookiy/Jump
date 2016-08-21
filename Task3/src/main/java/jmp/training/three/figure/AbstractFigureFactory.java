@@ -1,7 +1,11 @@
 package jmp.training.three.figure;
 
+import jmp.training.three.model.Ball;
+import jmp.training.three.model.Rectangle;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created by D on 25.07.2016.
@@ -25,5 +29,11 @@ public abstract class AbstractFigureFactory{
 
         list.add(t);
         return list;
+    }
+
+    public static void main(String[] args)
+    {
+        List<Ball> lb = AbstractFigureFactory.<Ball>newList("b");
+        System.out.println(lb);
     }
 }
