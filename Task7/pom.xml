@@ -8,11 +8,11 @@
 		<version>1.0.0</version>
 	</parent>
 
-  <artifactId>task7</artifactId>
+  <artifactId>deadlock</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
 
-  <name>seven</name>
+  <name>deadlock</name>
   <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>

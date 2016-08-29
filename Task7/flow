@@ -1,0 +1,8 @@
+jps -l 
+(example one row
+ 3096 jmp.training.thread.deadlock.App)
+jstack 3096 > deadlock.log
+
+
+
+
