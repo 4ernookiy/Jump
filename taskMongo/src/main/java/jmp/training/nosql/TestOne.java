@@ -1,6 +1,11 @@
 package jmp.training.nosql;
 
+import com.mongodb.DBObject;
 import com.mongodb.client.MongoCollection;
+import jmp.training.nosql.converter.UserConverter;
+import jmp.training.nosql.dao.IUserDAO;
+import jmp.training.nosql.dao.UserDaoImpl;
+import jmp.training.nosql.entity.User;
 import org.bson.Document;
 
 /**
@@ -9,13 +14,12 @@ import org.bson.Document;
 public class TestOne {
     public static void main(String[] args) {
         MongoCollection<Document> users = MongoDBClient.getCollection("users");
+        IUserDAO userDAO = new UserDaoImpl();
 
-        Document doc = new Document()
-                .append("name", "Леша")
-                .append("country", "Belgium")
-                .append("ого", "ага");
-
-        users.insertOne(doc);
+        for ( int i = 0; i < 10;i++) {
+            User user = User.generateRandom();
+            userDAO.insert(user);
+        }
 
         MongoDBClient.println(users);
 
