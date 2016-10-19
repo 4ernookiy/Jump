@@ -16,9 +16,10 @@ public class User {
 
     public static User generateRandom(){
         String s = UUID.randomUUID().toString();
+        String name = "name.user_"+s.substring(0,6);
         User u = new User();
-        u.setName(s);
-        u.setEmail(s+"@gmail.com");
+        u.setName(name);
+        u.setEmail(name+"@gmail.com");
         return u;
     }
     public User() {

@@ -42,7 +42,7 @@
         <appender-ref ref="a_console"/>
     </logger>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="a_console"/>
     </root>
 </configuration>
