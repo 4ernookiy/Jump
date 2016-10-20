@@ -21,10 +21,10 @@ public class TestOne {
         IUserDAO userDAO = new UserDaoImpl();
         Long begin = System.currentTimeMillis();
         Long dif, tmp;
-        for ( int i = 0; i < 1_000_000;i++) {
+        for ( int i = 0; i < 1_000;i++) {
             User user = User.generateRandom();
             userDAO.insert(user);
-            if (i % 100_00 == 0){
+            if (i % 1_000 == 0){
                 tmp = System.currentTimeMillis();
                 dif = tmp - begin;
                 begin = tmp;
