@@ -42,4 +42,13 @@ public class Adress
     {
         this.zip = zip;
     }
+
+    @Override
+    public String toString() {
+        return "Adress{" +
+                "zip='" + zip + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                '}';
+    }
 }

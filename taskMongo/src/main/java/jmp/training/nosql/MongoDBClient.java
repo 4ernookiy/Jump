@@ -9,9 +9,6 @@ import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.print.Doc;
-import javax.print.attribute.standard.DocumentName;
-
 /**
  * Created by d4 on 17.10.2016.
  */

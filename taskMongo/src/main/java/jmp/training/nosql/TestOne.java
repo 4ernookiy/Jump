@@ -1,8 +1,6 @@
 package jmp.training.nosql;
 
-import com.mongodb.DBObject;
 import com.mongodb.client.MongoCollection;
-import jmp.training.nosql.converter.UserConverter;
 import jmp.training.nosql.dao.IUserDAO;
 import jmp.training.nosql.dao.UserDaoImpl;
 import jmp.training.nosql.entity.User;
@@ -21,7 +19,7 @@ public class TestOne {
         IUserDAO userDAO = new UserDaoImpl();
         Long begin = System.currentTimeMillis();
         Long dif, tmp;
-        for ( int i = 0; i < 1_000;i++) {
+        for ( int i = 0; i < 5_00;i++) {
             User user = User.generateRandom();
             userDAO.insert(user);
             if (i % 1_000 == 0){

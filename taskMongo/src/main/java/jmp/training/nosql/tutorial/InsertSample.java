@@ -1,4 +1,4 @@
-package jmp.training.nosql;
+package jmp.training.nosql.tutorial;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
@@ -10,13 +10,24 @@ import org.bson.Document;
 /**
  * Created by Alexey_Zinovyev on 12-Oct-16.
  */
-public class DDLSample {
+public class InsertSample {
     public static void main(String[] args) {
         MongoClient mongoClient = new MongoClient();
         MongoDatabase db = mongoClient.getDatabase("local");
-//        db.createCollection("artists");
         MongoCollection<Document> artists = db.getCollection("artists");
-        System.out.println(artists.getReadConcern());
 
+
+        Document doc = new Document()
+                .append("name", "Van Gogh")
+                .append("country", "Belgium")
+                .append("potatoes_eaters", 4);
+        artists.insertOne(doc);
+
+        FindIterable<Document> iterable = artists.find();
+        final MongoCursor<Document> iterator = iterable.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next().toString());
+
+        }
     }
 }

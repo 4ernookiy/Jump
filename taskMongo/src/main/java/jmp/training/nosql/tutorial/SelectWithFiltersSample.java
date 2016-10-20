@@ -1,4 +1,4 @@
-package jmp.training.nosql;
+package jmp.training.nosql.tutorial;
 
 import com.mongodb.Block;
 import com.mongodb.MongoClient;
