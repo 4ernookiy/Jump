@@ -17,11 +17,13 @@ public class AppExample {
 		Volumetric regPyramid = new RegularPyramid(new Square(5), 7);
 		Volumetric cuboid = new Cuboid(new Rectangle(2, 1), 3);
 		Volumetric cylinder = new Cylinder(new Circle(2), 5);
+		Volumetric ball = new Ball(3);
 
 		complexFigure.add(cube);
 		complexFigure.add(regPyramid);
 		complexFigure.add(cuboid);
 		complexFigure.add(cylinder);
+		complexFigure.add(ball);
 
 		System.out.println(complexFigure);
 		System.out.println(complexFigure.getVolume());
