@@ -1,5 +1,6 @@
 package jmp.training.one.volumetric;
 
+import jmp.training.one.core.Volumetric;
 import jmp.training.one.flat.Circle;
 
 /**

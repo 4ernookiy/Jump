@@ -1,4 +1,4 @@
-package jmp.training.one.flat;
+package jmp.training.one.core;
 
 /**
  * плоский

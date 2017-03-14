@@ -1,5 +1,7 @@
 package jmp.training.one;
 
+import jmp.training.one.core.Figure;
+import jmp.training.one.core.Volumetric;
 import jmp.training.one.flat.Circle;
 import jmp.training.one.flat.Rectangle;
 import jmp.training.one.flat.Square;
@@ -9,7 +11,7 @@ public class AppExample {
 
 	public static void main(String[] args) {
 
-		ComplexFigure complexFigure = new ComplexFigure();
+		Figure complexFigure = new ComplexFigure();
 
 		Volumetric cube = new Cube(new Square(10));
 		Volumetric regPyramid = new RegularPyramid(new Square(5), 7);

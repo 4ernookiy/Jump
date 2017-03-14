@@ -1,5 +1,7 @@
 package jmp.training.one.flat;
 
+import jmp.training.one.core.Flat;
+
 /**
  * круг
  */

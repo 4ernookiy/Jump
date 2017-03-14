@@ -1,5 +1,7 @@
 package jmp.training.one.flat;
 
+import jmp.training.one.core.Flat;
+
 public class Rectangle implements Flat{
 
 	private double a;

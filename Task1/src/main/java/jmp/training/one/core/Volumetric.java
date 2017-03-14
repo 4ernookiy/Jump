@@ -1,4 +1,4 @@
-package jmp.training.one.volumetric;
+package jmp.training.one.core;
 
 /**
  * объемный
